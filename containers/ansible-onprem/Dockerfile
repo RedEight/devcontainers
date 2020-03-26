@@ -55,13 +55,9 @@ RUN apt-get update \
     && apt-get autoremove -y \
     && apt-get clean -y \
     && rm -rf /var/lib/apt/lists/*
-# Install deps for vmware.
-#RUN cd /tmp && git clone https://github.com/vmware/vsphere-automation-sdk-python.git
-#RUN cd /tmp/vsphere-automation-sdk-python && \
-    #    pip install --upgrade --force-reinstall -r requirements.txt --extra-index-url file:////tmp/vsphere-automation-sdk-python/lib && \
-    #k    rm -rf /tmp/*
-# Switch back to dialog for any ad-hoc use of apt-get
+# Install deps for ansible
 COPY requirements.txt requirements.txt
 RUN pip install -r requirements.txt
+# Switch back to dialog for any ad-hoc use of apt-get
 ENV DEBIAN_FRONTEND=dialog
 
