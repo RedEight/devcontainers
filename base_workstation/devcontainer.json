@@ -1,0 +1,19 @@
+{
+	"name": "developer-workstation",
+	"dockerFile": "Dockerfile",
+	"mounts": [
+		"source=${localEnv:HOME}/.aws,target=/root/.aws,type=bind,consistency=cached"
+	],
+	"settings": {
+		"terminal.integrated.shell.linux": "/bin/zsh"
+	},
+	"extensions": [
+		"vscoss.vscode-ansible",
+		"mauve.terraform",
+		"redhat.vscode-yaml",
+		"ms-azuretools.vscode-docker"
+	],
+	"remoteEnv": {
+		"AWS_CONFIG_FILE": "$HOME/.aws/credentials-vscode",
+	}
+}

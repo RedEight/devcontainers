@@ -1,0 +1,15 @@
+ansible
+dnspython
+netapp-lib
+pandevice
+molecule
+pywinrm
+git+https://github.com/vmware/vsphere-automation-sdk-python.git
+awscli
+boto3
+boto
+beautifulsoup4
+requests-ntlm
+requests
+lxml
+bs4
